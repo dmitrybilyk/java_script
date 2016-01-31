@@ -1,0 +1,21 @@
+<html>
+  <head>
+     <title>Using the JavaScript confirm box</title>
+  </head>
+  <body bgcolor="lightgreen">
+    <script type = "text/javascript">
+        var phoneNumber = prompt("Enter your phone number, please");
+        if (phoneNumber != null) {
+            var sure = confirm("Are you sure you number is " + phoneNumber );
+            if(sure == true){
+                alert("good");
+            }else {
+                alert("not good");
+            }
+        } else {
+            alert("You didn't provide your phone number")
+        }
+	// document.clear   // Clears the page
+
+     </script>
+   </body>
