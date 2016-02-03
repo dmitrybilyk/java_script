@@ -1,0 +1,27 @@
+<html>
+<head><title>link</title>
+    <script type="text/javascript">
+        enter = eval(prompt("Year"));
+        function tipCalc(amount){
+            document.write( amount*0.2);
+        }
+        function changeColor(color){
+            document.getElementById("bod").setAttribute("bgColor", color);
+        }
+        function isLeapYear(year){
+            if (year % 4 == 0) {
+                document.write("this year is leap");
+            } else {
+                document.write("this year is not leap")
+            }
+        }
+    </script>
+</head>
+<body id="bod">
+<!--<a href="#" onclick="tipCalc(enter)">Click here</a>-->
+<button onclick="isLeapYear(enter)">Leap Year</button>
+<button onclick="changeColor('red')">Red</button>
+<button onclick="changeColor('yellow')">Yellow</button>
+<h2>Hello</h2>
+</body>
+</html>
