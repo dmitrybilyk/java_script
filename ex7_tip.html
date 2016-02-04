@@ -1,7 +1,25 @@
 <html>
 <head><title>link</title>
     <script type="text/javascript">
-        enter = eval(prompt("Year"));
+//        enter = eval(prompt("Year"));
+//        var rateEnter = eval(prompt("Rate"));
+//        var timeEnter = eval(prompt("Time"));
+//var factorialInit = eval(prompt("Init Value)"));
+        try {
+            var firstEnter = eval(prompt("First"));
+            var secondEnter = eval(prompt("Second"));
+            if (firstEnter > 100) {
+                throw "TooBigValue";
+            }
+        } catch (er) {
+            if (er == "TooBigValue") {
+                alert ("value " + firstEnter + "is too big");
+            }
+            exit;
+        }
+
+        document.write(firstEnter * secondEnter);
+
         function tipCalc(amount){
             document.write( amount*0.2);
         }
@@ -15,13 +33,50 @@
                 document.write("this year is not leap")
             }
         }
+        function outerFunction(rate, time) {
+            var rate, time;
+            var result = function() {
+                document.write(rate * time);
+            };
+            document.write("from function" + (rate * time * 10));
+            return result;
+        }
+        function findFactorial(initValue) {
+            var currentValue = 0;
+            for (i = 0; i <= initValue; i++) {
+                if (i < 1) {
+                    currentValue += 1;
+                } else {
+                    currentValue *= i;
+                }
+            }
+            return currentValue;
+
+        }
     </script>
 </head>
 <body id="bod">
 <!--<a href="#" onclick="tipCalc(enter)">Click here</a>-->
-<button onclick="isLeapYear(enter)">Leap Year</button>
-<button onclick="changeColor('red')">Red</button>
-<button onclick="changeColor('yellow')">Yellow</button>
-<h2>Hello</h2>
+<!--<pre>-->
+<!--<script>-->
+    <!--var f = outerFunction(rateEnter, timeEnter);-->
+    <!--document.writeln("__________");-->
+    <!--var f1 = outerFunction(2, 10);-->
+    <!--document.writeln("__________");-->
+    <!--var f2 = outerFunction(3, 10);-->
+    <!--document.writeln("__________");-->
+    <!--document.writeln("__________");-->
+    <!--f1(8, 9);-->
+    <!--document.writeln("__________");-->
+    <!--f2(1, 1);-->
+<!--</script>-->
+    <!--</pre>-->
+    <script>
+        document.write(findFactorial(factorialInit));
+    </script>
+<!--<button onclick="isLeapYear(enter)">Leap Year</button>-->
+<!--<button onclick="changeColor('red')">Red</button>-->
+<!--<button onclick="changeColor('yellow')">Yellow</button>-->
+<!--<h2>Hello</h2>-->
 </body>
 </html>
