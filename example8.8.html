@@ -2,7 +2,7 @@
 	<html>
 	<head><title>Object Literals</title>
 	</head>
-            script type = "text/javascript">
+            <script type = "text/javascript">
 			var Car = {
 				make: "Honda Civic",
 				year: 2009,
@@ -10,10 +10,10 @@
 				owner: {
 				         name:"Henry Lee",
 				         cell_phone: "222-222-2222",
-				         address: { street: 10 Main,
-				                    city: SF,
-				                    state: CA
-				                   }
+				         address: { street: '10 Main',
+				                    city: 'SF',
+				                    state: 'CA'
+				                   },
 			        dealer: "SF Honda",
 			        displayDetails: function(){
 			            var details=car.make + "<br>";
@@ -22,7 +22,7 @@
 					details += car.owner + "<br>";
 			                alert(details);
 				}
-			};
+			}};
 
 		</script>
         <body>
@@ -30,6 +30,6 @@
              <script type="text/javascript">
                     var myCar = new Car();
                     myCar.displayDetails();
-             </script>?
+             </script>
 	</body>
 	</html>

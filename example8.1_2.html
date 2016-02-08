@@ -1,0 +1,17 @@
+<html>
+<head><title>The Object() Constructor</title>
+<script type = "text/javascript">
+
+</script>
+</head>
+<body>
+<script>
+	var circle = new Object();
+	circle.radius = 40;
+	circle.calculateCircumference = function() {
+		document.write(this.radius * this.radius);
+	};
+	circle.calculateCircumference();
+</script>
+</body>
+</html>
